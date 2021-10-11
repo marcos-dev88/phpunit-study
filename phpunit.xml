@@ -11,7 +11,7 @@
         verbose="false">
     <testsuites>
         <testsuite name="Test Create User App">
-            <directory>./src</directory>
+            <directory>./test</directory>
         </testsuite>
     </testsuites>
 </phpunit>
