@@ -7,29 +7,33 @@ class User
     /**
      * @var string
      */
-    private string $username;
+    private string $username = '';
 
     /**
      * @var string
      */
-    private string $password;
+    private string $password = '';
 
     /**
      * @var string
      */
-    private string $email;
+    private string $email = '';
 
 
     /**
-     * @param string $username
-     * @param string $password
-     * @param string $email
+     * @param array $attributes
      */
-    public function __construct(string $username, string $password, string $email)
+    public function __construct(array $attributes = [])
     {
-        $this->username = $username;
-        $this->password = $password;
-        $this->email = $email;
+        if (!array_key_exists('username', $attributes) ||
+            !array_key_exists('password', $attributes) ||
+            !array_key_exists('email', $attributes)){
+            return;
+        }
+
+        $this->username = $attributes['username'];
+        $this->password = $attributes['password'];
+        $this->email = $attributes['email'];
     }
 
 
