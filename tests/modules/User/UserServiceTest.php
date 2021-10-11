@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Services;
+namespace Tests\Modules\User;
 
 use Modules\Models\User;
 use PHPUnit\Framework\TestCase;

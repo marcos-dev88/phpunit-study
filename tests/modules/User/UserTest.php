@@ -12,7 +12,7 @@ class UserTest extends TestCase
     {
         $expectedUsername = "Marcos";
 
-        $user = new User("", "", "");
+        $user = new User(['username' => $expectedUsername]);
 
         $user->setUsername("Marcos");
 
@@ -24,7 +24,7 @@ class UserTest extends TestCase
     {
         $expectedEmail = "some@some.com";
 
-        $user = new User("", "", "");
+        $user = new User(['email' => $expectedEmail]);
 
         $user->setEmail("some@some.com");
 
@@ -36,7 +36,7 @@ class UserTest extends TestCase
     {
         $expectedPassword = "Marcos123";
 
-        $user = new User("", "", "");
+        $user = new User(['password' => $expectedPassword]);
 
         $user->setPassword("Marcos123");
 
@@ -46,7 +46,7 @@ class UserTest extends TestCase
     /** @test */
     public function testUserClass()
     {
-        $user = new User("Marcos", "somepass", "some");
+        $user = new User();
         $this->assertInstanceOf(
             User::class,
             $user
